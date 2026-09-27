@@ -7,7 +7,13 @@ It does this by **generating CSS for `userChrome.css`**, which overlays the icon
 ## How it works
 
 1. Right-click any bookmark → **Set custom icon…** (works from the bookmarks toolbar). The options page opens showing that bookmark as the target.
+
+   ![Bookmarks toolbar context menu showing the extension's "Set custom icon…", "Capture icon" and "Remove custom icon" entries](extension_menu.png)
+
 2. Choose an icon: pick a file from disk, or **reuse another bookmark's icon** directly (custom icons copy instantly; a site's own icon is fetched live where the site allows it). You can also right-click a bookmark → **Capture icon** to save that site's favicon to disk for later use — no page opens on success.
+
+   ![The options page for the chosen bookmark: the target, the file picker and "reuse a toolbar bookmark's icon" list, the shared preview, and the "Generate and copy icon CSS" step](extension_screen.png)
+
 3. Click **Generate and copy icon CSS** — it saves the icon and copies the generated CSS (replacing each bookmark's toolbar icon with your chosen one, painted as a `background-image` on the bookmark button) straight to the clipboard.
 4. You paste that CSS into `chrome/userChrome.css` in your profile folder and restart Firefox.
 
@@ -68,12 +74,14 @@ To change icons later, reopen the options page (right-click the bookmark again),
 
 ```
 firefox-icon-swapper/
-├── README.md          # this file
-├── AGENTS.md          # guidance for AI/agents working here
-├── PLAN.md            # design rationale and implementation plan
+├── README.md            # this file
+├── AGENTS.md            # guidance for AI/agents working here
+├── PLAN.md              # design rationale and implementation plan
+├── extension_menu.png   # screenshot: the bookmark context menu
+├── extension_screen.png # screenshot: the options page
 └── extension/
-    ├── manifest.json  # MV3 manifest
-    ├── background.js  # bookmarks context menu
-    ├── icons/         # extension icon
-    └── options/       # options page (picker + CSS generator)
+    ├── manifest.json    # MV3 manifest
+    ├── background.js    # bookmarks context menu
+    ├── icons/           # extension icon
+    └── options/         # options page (picker + CSS generator)
 ```
