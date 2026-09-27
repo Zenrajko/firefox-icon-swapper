@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+header p {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
+section {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: 8px;
+}
+
+section h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+code {
+  background: rgba(127, 127, 127, 0.15);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+#copy-select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.target-box {
+  border: 1px dashed rgba(127, 127, 127, 0.45);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: rgba(127, 127, 127, 0.08);
+}
+
+.target-box p {
+  margin: 0;
+}
+
+.target-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.target-url {
+  font-family: monospace;
+  font-size: 12px;
+  opacity: 0.75;
+  word-break: break-all;
+}
+
+.hint {
+  font-size: 12px;
+  opacity: 0.75;
+  margin: 8px 0 0;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 13px;
+}
+
+.steps li {
+  margin: 16px 0;
+}
+
+.steps li.disabled {
+  opacity: 0.45;
+}
+
+#step-5 p {
+  margin-bottom: 2px;
+}
+
+#apply-btn {
+  font-size: 15px;
+  padding: 10px 24px;
+  margin-top: 2px;
+}
+
+.muted {
+  font-size: 12px;
+  opacity: 0.75;
+  margin: 4px 0 0;
+}
+
+.muted.error {
+  color: #c00;
+  opacity: 1;
+}
+
+.field {
+  margin: 8px 0;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.field small {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.preview-row {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.preview-row.visible {
+  display: flex;
+}
+
+.preview {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  border: 1px dashed rgba(127, 127, 127, 0.4);
+  background: transparent;
+}
+
+.loading {
+  font-style: italic;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.status.error {
+  color: #c00;
+}
+
+button {
+  cursor: pointer;
+}

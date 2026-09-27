@@ -1,0 +1,11 @@
+# web-ext / npx
+node_modules/
+.web-ext/
+*.xpi
+
+# editor / OS cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

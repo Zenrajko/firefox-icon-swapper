@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Firefox Icon Swapper</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header>
+    <h1>Firefox Icon Swapper</h1>
+  </header>
+
+  <section>
+    <h2>1. Bookmark</h2>
+    <div id="target-box" class="target-box"><p id="target-detail"></p></div>
+    <p class="hint">To pick a different bookmark, right-click it on the toolbar and choose <strong>Set custom icon…</strong>.</p>
+  </section>
+
+  <section>
+    <h2>2. Choose an icon</h2>
+    <div class="field">
+      <label for="light-file">Use a file from your computer</label>
+      <input type="file" id="light-file" accept="image/*">
+    </div>
+    <div class="field">
+      <label for="copy-select">Or reuse a toolbar bookmark's icon</label>
+      <select id="copy-select">
+        <option value="">Choose a bookmark…</option>
+      </select>
+    </div>
+    <div id="preview-row" class="preview-row">Preview icon: <img id="icon-preview" class="preview" alt="icon preview"><span id="preview-loading" class="loading">loading…</span></div>
+    <p id="apply-status" class="status" hidden></p>
+  </section>
+
+  <section id="step3" hidden>
+    <h2>3. Apply selected icon to bookmark</h2>
+
+    <ol class="steps">
+      <li id="step-1">
+        Type <code>about:profiles</code> in the address bar to open the Profiles page.
+      </li>
+      <li id="step-2">
+        Click the "Open Folder" button in the "Root Directory" row of the current profile.
+      </li>
+      <li id="step-3">
+        Open the "chrome" folder.
+      </li>
+      <li id="step-4">
+        Open "userChrome.css" in a text editor (create the file first if it doesn't exist yet).
+      </li>
+      <li id="step-5">
+        <p>Click the button below to generate the CSS for the icon and copy it to the clipboard.</p>
+        <button id="apply-btn">Generate and copy icon CSS</button>
+      </li>
+      <li id="step-6" class="disabled">
+        Paste the text in the clipboard into the <code>userChrome.css</code> file, and save the file.
+      </li>
+    </ol>
+
+    <ol class="steps" start="7">
+      <li id="step-7" class="disabled">Restart Firefox so the custom icons take effect.</li>
+    </ol>
+    <p class="hint">One-time setup: enable toolkit.legacyUserProfileCustomizations.stylesheets in about:config if not already enabled — see the README for details.</p>
+  </section>
+
+  <script src="options.js"></script>
+</body>
+</html>

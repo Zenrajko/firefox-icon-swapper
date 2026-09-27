@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Firefox Icon Swapper",
+  "version": "1.0.0",
+  "description": "Hide a bookmark's real favicon on the bookmarks toolbar and draw your own light/dark icon on top via userChrome.css.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "firefox-icon-swapper@local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": ["menus", "bookmarks", "storage", "clipboardWrite", "downloads", "tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "32": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  }
+}
